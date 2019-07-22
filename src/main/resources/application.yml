@@ -1,0 +1,19 @@
+server:
+  port: 8090
+eureka:
+  server:
+    # 测试时关闭自我保护机制，保证不可用服务及时踢出
+    enable-self-preservation: false
+  client:
+   #是否从eureka上获取注册信息
+    fetch-registry: false
+    #表示是否注册自身到eureka服务器
+    register-with-eureka: false
+    #如果此eureka想要向其他eureka注册就放开此注解
+#    service-url:
+#      defaultZone:  http://127.0.0.1:8060/eureka/,http://127.0.0.1:8070/eureka/
+#spring:
+#  application:
+#    name: eureka8090
+
+#不让他去找别的服务（服务发现、服务注册），默认提供服务发现功能
